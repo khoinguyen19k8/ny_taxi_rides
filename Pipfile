@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pgcli = "*"
+pyspark = {extras = ["sql"], version = "*"}
+numpy = "*"
+pandas = "*"
+jupyterlab = "*"
+sqlalchemy = "*"
+psycopg2 = "*"
+tqdm = "*"
+prefect = "*"
+prefect-sqlalchemy = "*"
+prefect-gcp = {extras = ["cloud-storage"], version = "*"}
+protobuf = "*"
+pyarrow = "*"
+pandas-gbq = "*"
+psycopg2-binary = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
+python_full_version = "3.11.0"
