@@ -1,0 +1,10 @@
+credentials/
+2022_week_2_data_ingestion/
+.ipynb_checkpoints/
+week_1_basics_n_setup/2_docker_sql/data/
+*.gz
+*.csv
+*.tfstate
+.terraform/
+.vscode/
+data/
