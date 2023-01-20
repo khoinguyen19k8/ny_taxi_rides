@@ -14,11 +14,11 @@ psycopg2 = "*"
 tqdm = "*"
 prefect = "*"
 prefect-sqlalchemy = "*"
-prefect-gcp = {extras = ["cloud-storage"], version = "*"}
 protobuf = "*"
 pyarrow = "*"
 pandas-gbq = "*"
 psycopg2-binary = "*"
+prefect-gcp = {extras = ["cloud_storage"], version = "*"}
 
 [dev-packages]
 

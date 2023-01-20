@@ -34,6 +34,14 @@ def write_local(df: pd.DataFrame, color: str, dataset_file: str) -> Path:
     return path
 
 
+@task()
+def write_gcs(path: Path) -> None:
+    """Uploading local poarquet file to GCS"""
+    gcp_block = GcsBucket.load("zoom-gcs")
+    gcp_block.upload_from_path(from_path=f"{path}", to_path=path)
+    return
+
+
 @flow()
 def etl_web_to_gcs() -> None:
     """The main ETL function"""
@@ -45,7 +53,8 @@ def etl_web_to_gcs() -> None:
 
     df = fetch(dataset_url)
     df_clean = clean(df)
-    write_local(df_clean, color, dataset_file)
+    path = write_local(df_clean, color, dataset_file)
+    write_gcs(path)
 
 
 if __name__ == "__main__":
