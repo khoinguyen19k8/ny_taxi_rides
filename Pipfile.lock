@@ -1533,11 +1533,11 @@
                 "cloud_storage"
             ],
             "hashes": [
-                "sha256:1c9c4df6c75ac3ac0a46daf2916704a73b875e8dc55a49bcc42e98ab2126354a",
-                "sha256:ad9b77cb691f8d43efe575163edb6302547ec529d9896c815bf0e958927321a9"
+                "sha256:1d5989c17d58e88f45793404694c27810d2b7806d46593c894504e9765c41999",
+                "sha256:7b28174a3a750e5d777b32f85ed74a3bd24d529566de9ff69d4d92432e46049d"
             ],
             "index": "pypi",
-            "version": "==0.2.3"
+            "version": "==0.2.4"
         },
         "prefect-sqlalchemy": {
             "hashes": [
@@ -2315,11 +2315,11 @@
         },
         "setuptools": {
             "hashes": [
-                "sha256:78a02bdea8a5cb66dec1c507598c443bcc75562817d2556c1a17f7a344615bb4",
-                "sha256:fc19f9f62120a763300fd78e234b3cbd3417be098f08c156eaaf36420627e57b"
+                "sha256:6f590d76b713d5de4e49fe4fbca24474469f53c83632d5d0fd056f7ff7e8112b",
+                "sha256:ac4008d396bc9cd983ea483cb7139c0240a07bbc74ffb6232fceffedc6cf03a8"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==66.1.0"
+            "version": "==66.1.1"
         },
         "six": {
             "hashes": [
