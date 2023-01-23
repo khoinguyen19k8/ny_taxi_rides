@@ -7,7 +7,7 @@ from prefect.tasks import task_input_hash
 from datetime import timedelta
 
 
-@task(retries=3, cache_key_fn=task_input_hash, cache_expiration=timedelta(days=1))
+@task(retries=3)
 def fetch(dataset_url: str) -> pd.DataFrame:
     """Read data from web into pandas DataFrame"""
     # if randint(0, 1) > 0:
@@ -36,7 +36,7 @@ def write_local(df: pd.DataFrame, color: str, dataset_file: str) -> Path:
     return path
 
 
-@task()
+@task(log_prints=True)
 def write_gcs(path: Path) -> None:
     """Uploading local poarquet file to GCS"""
     gcp_block = GcsBucket.load("zoom-gcs")
