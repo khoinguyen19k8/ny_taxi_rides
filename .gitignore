@@ -8,3 +8,4 @@ week_1_basics_n_setup/2_docker_sql/data/
 .terraform/
 .vscode/
 data/
+google_credentials.json
