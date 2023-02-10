@@ -19,6 +19,7 @@ pyarrow = "*"
 pandas-gbq = "*"
 psycopg2-binary = "*"
 prefect-gcp = {extras = ["cloud_storage"], version = "*"}
+prefect-github = "*"
 
 [dev-packages]
 

@@ -1,17 +1,23 @@
 ###
 ### A complete description of a Prefect Deployment for flow 'etl-web-to-gcs'
 ###
-name: etl_web_to_gcs
+name: etl_web_to_gcs_remote
 description: The main ETL function
-version: f4be9da9817602583d15d12bb2a1ef65
+version: 170662634a515eed6ca8b0de3d525c40
 # The work queue that will handle this deployment's runs
 work_queue_name: default
-work_pool_name: null
-work_pool_queue_name: null
+work_pool_name: default-agent-pool
 tags: []
 parameters: {}
 schedule: null
+is_schedule_active: true
 infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: etl-web-to-gcs
+manifest_path: null
 infrastructure:
   type: process
   env: {}
@@ -20,17 +26,23 @@ infrastructure:
   command: null
   stream_output: true
   working_dir: null
+  _block_document_id: fc5b6e3d-c7e2-419a-8846-eced3e3eb03d
+  _block_document_name: anonymous-3fddd9f3-9888-4505-acfb-9483565730fa
+  _is_anonymous: true
   block_type_slug: process
   _block_type_slug: process
-
-###
-### DO NOT EDIT BELOW THIS LINE
-###
-flow_name: etl-web-to-gcs
-manifest_path: null
-storage: null
-path: /home/akooi/OneDrive/dev/data-engineer/data-engineering-zoomcamp/week_2_workflow_orchestration
-entrypoint: flows/04_hw/etl_web_to_gcs.py:etl_web_to_gcs
+storage:
+  repository: https://github.com/khoinguyen19k8/de-zoomcamp
+  reference: null
+  access_token: '**********'
+  include_git_objects: true
+  _block_document_id: 5cf76b11-8a4f-4bae-ac4b-670965a83cb1
+  _block_document_name: github-demo
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
+entrypoint: week_2_workflow_orchestration/flows/04_hw/etl_web_to_gcs.py:etl_web_to_gcs
 parameter_openapi_schema:
   title: Parameters
   type: object
@@ -54,4 +66,4 @@ parameter_openapi_schema:
   - year
   - color
   definitions: null
-timestamp: '2023-02-10T14:02:44.025174+00:00'
+timestamp: '2023-02-10T17:01:10.106457+00:00'
