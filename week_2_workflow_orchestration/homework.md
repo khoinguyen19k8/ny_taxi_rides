@@ -12,6 +12,12 @@
 
 # Question 4
 
+* 88,605
+
 # Question 5
 
+* 514,392
+
 # Question 6
+ 
+* 8

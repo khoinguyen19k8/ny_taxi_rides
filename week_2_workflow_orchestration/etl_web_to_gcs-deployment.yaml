@@ -3,7 +3,7 @@
 ###
 name: etl_web_to_gcs_remote
 description: The main ETL function
-version: 170662634a515eed6ca8b0de3d525c40
+version: 4a1d63274e7ca0ec131987f1e0ac1ad2
 # The work queue that will handle this deployment's runs
 work_queue_name: default
 work_pool_name: default-agent-pool
@@ -26,8 +26,8 @@ infrastructure:
   command: null
   stream_output: true
   working_dir: null
-  _block_document_id: fc5b6e3d-c7e2-419a-8846-eced3e3eb03d
-  _block_document_name: anonymous-3fddd9f3-9888-4505-acfb-9483565730fa
+  _block_document_id: cf9ccac3-0e71-4efb-9fd9-c2b0e4e6c123
+  _block_document_name: anonymous-0f407c93-439f-4613-9a71-7b1256d15d55
   _is_anonymous: true
   block_type_slug: process
   _block_type_slug: process
@@ -36,7 +36,7 @@ storage:
   reference: null
   access_token: '**********'
   include_git_objects: true
-  _block_document_id: 5cf76b11-8a4f-4bae-ac4b-670965a83cb1
+  _block_document_id: 9a44d11a-5e9b-4411-b660-eafc35b36b89
   _block_document_name: github-demo
   _is_anonymous: false
   block_type_slug: github
@@ -66,4 +66,4 @@ parameter_openapi_schema:
   - year
   - color
   definitions: null
-timestamp: '2023-02-10T17:01:10.106457+00:00'
+timestamp: '2023-02-10T17:39:35.541313+00:00'
