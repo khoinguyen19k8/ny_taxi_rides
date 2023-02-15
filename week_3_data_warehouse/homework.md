@@ -4,7 +4,7 @@
 
 # Question 2
 
-
+* 0 MB for the External Table and 317.94MB for the BQ Table
 
 # Question 3
 
