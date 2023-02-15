@@ -27,6 +27,8 @@ def clean(df: pd.DataFrame, color: str) -> pd.DataFrame:
     elif color == "fhv":
         df["pickup_datetime"] = pd.to_datetime(df["pickup_datetime"])
         df["dropOff_datetime"] = pd.to_datetime(df["dropOff_datetime"])
+        df["PUlocationID"] = df["PUlocationID"].astype('int64')
+        df["DOlocationID"] = df["DOlocationID"].astype('int64')
         
 
     print(df.head(2))
