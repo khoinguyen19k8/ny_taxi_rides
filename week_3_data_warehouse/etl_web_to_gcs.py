@@ -21,9 +21,13 @@ def clean(df: pd.DataFrame, color: str) -> pd.DataFrame:
     if color == "yellow":
         df["tpep_pickup_datetime"] = pd.to_datetime(df["tpep_pickup_datetime"])
         df["tpep_dropoff_datetime"] = pd.to_datetime(df["tpep_dropoff_datetime"])
+        df["passenger_count"] = df["passenger_count"].fillna(-999).astype('int64')
+        df["VendorID"] = df["VendorID"].fillna(-999).astype('int64')
     elif color == "green":
         df["lpep_pickup_datetime"] = pd.to_datetime(df["lpep_pickup_datetime"])
         df["lpep_dropoff_datetime"] = pd.to_datetime(df["lpep_dropoff_datetime"])
+        df["passenger_count"] = df["passenger_count"].fillna(-999).astype('int64')
+        df["VendorID"] = df["VendorID"].fillna(-999).astype('int64')
     elif color == "fhv":
         df["pickup_datetime"] = pd.to_datetime(df["pickup_datetime"])
         df["dropOff_datetime"] = pd.to_datetime(df["dropOff_datetime"])
