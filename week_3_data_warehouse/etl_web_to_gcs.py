@@ -25,7 +25,6 @@ def clean(df: pd.DataFrame, color: str) -> pd.DataFrame:
         df["VendorID"] = df["VendorID"].fillna(-999).astype('int64')
         df["RatecodeID"] = df["RatecodeID"].fillna(-999).astype('int64')
         df["payment_type"] = df["payment_type"].fillna(-999).astype('int64')
-        df["trip_type"] = df["trip_type"].fillna(-999).astype('int64')
 
     elif color == "green":
         df["lpep_pickup_datetime"] = pd.to_datetime(df["lpep_pickup_datetime"])
