@@ -15,7 +15,7 @@ models:
         Green taxis may respond to street hails,but only in the areas indicated in green on the
         map (i.e. above W 110 St/E 96th St in Manhattan and in the boroughs).
         The records were collected and provided to the NYC Taxi and Limousine Commission (TLC) by
-        technology service providers. NA values in numeric columns has values -999.
+        technology service providers. NA values in numeric columns has values -999. abc
       columns:
           - name: tripid
             description: Primary key for this table, generated with a concatenation of vendorid+pickup_datetime
