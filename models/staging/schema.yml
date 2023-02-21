@@ -15,7 +15,7 @@ models:
         Green taxis may respond to street hails,but only in the areas indicated in green on the
         map (i.e. above W 110 St/E 96th St in Manhattan and in the boroughs).
         The records were collected and provided to the NYC Taxi and Limousine Commission (TLC) by
-        technology service providers. 
+        technology service providers. NA values in numeric columns has values -999.
       columns:
           - name: tripid
             description: Primary key for this table, generated with a concatenation of vendorid+pickup_datetime
@@ -106,7 +106,7 @@ models:
         Yellow taxis are the only vehicles permitted to respond to a street hail from a passenger in all five
         boroughs. They may also be hailed using an e-hail app like Curb or Arro.
         The records were collected and provided to the NYC Taxi and Limousine Commission (TLC) by
-        technology service providers. 
+        technology service providers. NA values in numeric columns has values -999.
       columns:
           - name: tripid
             description: Primary key for this table, generated with a concatenation of vendorid+pickup_datetime
