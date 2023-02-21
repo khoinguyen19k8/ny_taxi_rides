@@ -3,17 +3,27 @@
 ###
 name: etl_web_to_gcs_remote
 description: The main ETL function
-version: 27c5dd7ed7bb73462bff9e5c8f0ba774
+version: 7c9fbec278a3ed37820902b3fd040503
 # The work queue that will handle this deployment's runs
 work_queue_name: default
 work_pool_name: default-agent-pool
 tags: []
 parameters:
-  {
-    "color": "fhv",
-    "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    "year": 2019,
-  }
+  year: 2019
+  color: fhv
+  months:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
 schedule: null
 is_schedule_active: true
 infra_overrides: {}
@@ -37,16 +47,16 @@ infrastructure:
   block_type_slug: process
   _block_type_slug: process
 storage:
-  repository: https://github.com/khoinguyen19k8/de-zoomcamp
+  repository: https://github.com/khoinguyen19k8/ny_taxi_rides
   reference: null
-  access_token: "**********"
+  access_token: '**********'
   include_git_objects: true
   _block_document_id: 9a44d11a-5e9b-4411-b660-eafc35b36b89
   _block_document_name: github-demo
   _is_anonymous: false
   block_type_slug: github
   _block_type_slug: github
-path: ""
+path: ''
 entrypoint: week_3_data_warehouse/etl_web_to_gcs.py:etl_web_to_gcs
 parameter_openapi_schema:
   title: Parameters
@@ -67,8 +77,8 @@ parameter_openapi_schema:
       position: 2
       type: string
   required:
-    - months
-    - year
-    - color
+  - months
+  - year
+  - color
   definitions: null
-timestamp: "2023-02-15T12:33:00.187887+00:00"
+timestamp: '2023-02-21T14:16:40.861362+00:00'
