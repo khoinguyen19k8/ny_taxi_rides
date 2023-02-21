@@ -9,3 +9,9 @@ week_1_basics_n_setup/2_docker_sql/data/
 .vscode/
 data/
 google_credentials.json
+
+# Default .gitignore content added by dbt Cloud
+target/
+dbt_packages/
+logs/
+# end dbt Cloud content
