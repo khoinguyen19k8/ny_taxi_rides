@@ -22,5 +22,10 @@ models:
         tests:
             - not_null:
                 severity: error
+  
+  - name: fact_fhv_trips
+    description: >
+      Trips corresponding to For-Hire Vehicles in 2019.
+      The table contains records where both pickup and dropoff locations are valid and known zones.
       
       
