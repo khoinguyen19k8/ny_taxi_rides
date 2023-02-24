@@ -22,10 +22,11 @@ prefect-gcp = {extras = ["cloud_storage"], version = "*"}
 prefect-github = "*"
 
 [dev-packages]
+jupyterlab = "*"
 
 [requires]
-python_version = "3.11"
-python_full_version = "3.11.0"
+python_version = "3.9"
+python_full_version = "3.9.15"
 
 [pipenv]
 allow_prereleases = true
