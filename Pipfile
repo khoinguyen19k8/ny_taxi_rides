@@ -20,9 +20,11 @@ pandas-gbq = "*"
 psycopg2-binary = "*"
 prefect-gcp = {extras = ["cloud_storage"], version = "*"}
 prefect-github = "*"
+black = "*"
 
 [dev-packages]
 jupyterlab = "*"
+black = "*"
 
 [requires]
 python_version = "3.9"
