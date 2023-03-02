@@ -11,3 +11,28 @@ spark-submit \
     --input_green=data/pq/green/2021/* \
     --input_yellow=data/pq/yellow/2021/* \
     --output=data/report-2021
+
+--input_green=gs://dtc_data_lake_dtc-de-372302/pq/green/2021/* \
+--input_yellow=gs://dtc_data_lake_dtc-de-372302/pq/yellow/2021/* \
+--output=gs://dtc_data_lake_dtc-de-372302/data/report-2021
+
+gcloud dataproc jobs submit pyspark \
+    --cluster=de-zoomcamp-cluster \
+    --region=us-central1 \
+    gs://dtc_data_lake_dtc-de-372302/code/10_spark_sql.py \
+        -- \
+            --input_green=gs://dtc_data_lake_dtc-de-372302/pq/green/2020/* \
+            --input_yellow=gs://dtc_data_lake_dtc-de-372302/pq/yellow/2020/* \
+            --output=gs://dtc_data_lake_dtc-de-372302/data/report-2020
+            
+gcloud dataproc jobs submit pyspark \
+    --cluster=de-zoomcamp-cluster \
+    --region=us-central1 \
+    --jars=gs://spark-lib/bigquery/spark-bigquery-latest_2.12.jar \
+    gs://dtc_data_lake_dtc-de-372302/code/10_spark_sql_big_query.py \
+        -- \
+            --input_green=gs://dtc_data_lake_dtc-de-372302/pq/green/2020/* \
+            --input_yellow=gs://dtc_data_lake_dtc-de-372302/pq/yellow/2020/* \
+            --output=nytaxi.reports-2020
+
+    

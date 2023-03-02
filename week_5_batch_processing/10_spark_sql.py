@@ -6,7 +6,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 import argparse
 
-parser = argparse.ArgumentParser(description="Ingest CSV data to Postgres")
+parser = argparse.ArgumentParser()
 
 parser.add_argument("--input_green", required=True)
 parser.add_argument("--input_yellow", required=True)
